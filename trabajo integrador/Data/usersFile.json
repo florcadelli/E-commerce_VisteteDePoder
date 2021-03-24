@@ -1,0 +1,99 @@
+[
+  {
+    "id": "1",
+    "nombre": "x",
+    "email": "xio@kjasdkjsa.com",
+    "contrasenia": "$2a$10$UmCy0CYwtQ10zs28debbx.LS.wrnfiGSBQy8u./Nym9LdBpsJv2zW",
+    "delete": false
+  },
+  {
+    "id": "2",
+    "nombre": "florencia ",
+    "email": "flor@sjkdjsakd.com",
+    "contrasenia": "",
+    "confirmacionContrasenia": "",
+    "delete": false
+  },
+  {
+    "id": "3",
+    "nombre": "Laurita",
+    "email": "lau@dksjdka.com",
+    "contrasenia": "",
+    "confirmacionContrasenia": "",
+    "delete": false
+  },
+  {
+    "id": "4",
+    "nombre": "josefina",
+    "email": "lau@dksjdka.com",
+    "contrasenia": "",
+    "confirmacionContrasenia": "",
+    "delete": false
+  },
+  {
+    "id": "56",
+    "nombre": "ruthas",
+    "email": "ruth@gmail.com",
+    "contrasenia": "$2a$10$LFglW4qVI5j6245LbfgQAOHGkfPm9RLQHt0/2njWut/mCfeQuGT5K",
+    "confirmacionContrasenia": "",
+    "delete": false
+  },
+  {
+    "id": "29",
+    "nombre": "xiomara",
+    "email": "xiomara@gmail.com",
+    "contrasenia": "$2a$10$5g.6kZEIAxiQAoJAj6juXugwFK7GBXLhvvk2JXOuOCb.INdY7Q5fe",
+    "delete": false
+  },
+  {
+    "id": "25",
+    "nombre": "pablo",
+    "email": "pablo@gmail.com",
+    "contrasenia": "$2a$10$0m9p2WiwlJBpFADUa2AQiu5Iskkt3LevTHH/ZVU44jwOBmG5cSmPW",
+    "delete": false
+  },
+  {
+    "id": "6",
+    "nombre": "Laura",
+    "email": "laura@gmail.com",
+    "contrasenia": "$2a$10$ta/biYaTlsPQBihZSB3sO.zgBwG6bAcKS7ZpaOt3Zg/DECkemIiMy",
+    "delete": false
+  },
+  {
+    "id": "55",
+    "nombre": "Josefina",
+    "email": "jose@jose.com",
+    "contrasenia": "$2a$10$JOmGtD5kB/QrhLloDiIOhOomjCvlh01HqH3TIPhe6SN.dgmEjQh3i",
+    "delete": true
+  },
+  {
+    "id": "55",
+    "nombre": "Josefina",
+    "email": "jose@jose.com",
+    "contrasenia": "$2a$10$OcNGWq/6scRDaW5rrFoFRe6Zup/BpNQwie7ZhnqR6ARrzKm495dc.",
+    "delete": true
+  },
+  {
+    "id": "55",
+    "nombre": "Josefina",
+    "email": "jose@jose.com",
+    "contrasenia": "$2a$10$47Mbcmtg/gf8sPcOsSA4FuXwDKRxsO9f99sCnaFAij99xLnkysh7K",
+    "delete": true
+  },
+  {
+    "id": "55",
+    "nombre": "Josefina",
+    "email": "jose@jose.com",
+    "contrasenia": "$2a$10$k/VgRgL.K40jMgzwQUG9NO2QdwIwfIshlIyaQMU2gJlPwDJPJJiAy",
+    "userAvatar": "userAvatar-1609008619808.jpg",
+    "delete": false
+  },
+  {
+    "id": "65",
+    "nombre": "Laura",
+    "email": "lau@dksjdka.com",
+    "contrasenia": "$2a$10$pqg2XcOEAyMGheC03X1qOedyRlISKJJpb3iDAbeiBx04GxOrYLVu6",
+    "userAvatar": null,
+    "delete": false
+  }
+]

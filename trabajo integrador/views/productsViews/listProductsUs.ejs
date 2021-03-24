@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("../partials/head")%>
+<body>
+    <div class="container-fluid">
+        <!--HEADER-->
+        
+            <%-include("../partials/header")%>
+          <!-- fin del HEADER-->  
+
+          <!--MAIN-->   
+       <main class="mainProducto">        
+       
+        <section class="Nombre-Producto">
+          Lista de Productos
+  </section>
+  <ul class= "listado">
+    <% subcategory.forEach(function(product){ %>
+    <li>
+      Id: 
+     <div class="fondo"><a class="sinSubrayado" href="/products/detailProductUs/">
+      <div class="producto-y-descripcion">
+                            
+        <section class="fotoProducto">
+                <!--no lo muestra-->
+            </article>
+        </section>
+  
+        <section class="descripcion">
+          <div class="remera1"> Categoría: <%= subcategory %></div> 
+        
+         
+           
+         <button class="aCarrito"type="button">Añadir a carrito</button>
+  
+         
+  
+    
+          </section>
+  
+      </div>
+    </a>
+    </div>
+  
+    </li>
+      
+  </ul>
+  
+            </main>
+
+    <%-include("../partials/footer")%>
+</body>
+</html>

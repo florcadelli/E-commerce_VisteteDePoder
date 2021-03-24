@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("../partials/head")%>
+<body>
+    <div class="container-fluid">
+        <!--HEADER-->
+        
+            <%-include("../partials/header")%>
+          <!-- fin del HEADER-->  
+
+          <!--MAIN-->   
+       <main class="mainProducto">        
+        
+        <section class="Nombre-Producto">
+          Lista de Productos
+  </section>
+  <ul class= "listado">
+  
+    <% product.forEach(function(product){ %>
+    <li class="tarjetamini">
+      <!-- Id: <%= product.id %> -->
+     <div class="fondo">
+      <div class="producto-y-descripcion">
+           
+        <% if(product.image){ %>
+  
+        <section class="fotoProducto">
+            <article> <img src="/images/imagesProducts/<%= product.image  %> " alt=" <%= product.image %> ">
+                
+            </article>
+        </section>
+  
+        <% }else{ %>
+  
+           
+      
+      <section class="fotoProducto">
+        <article> <img src="/images/imagesProducts/defaultImage.jpg"  alt="defaultImage.jpg">
+            <!--no lo muestra-->
+        </article>
+    </section>
+       <% }%> 
+  
+        <section class="descripcion">
+          <div class="remera1 nombre">  <%= product.name %></div>
+            <div class="remera1">  <%= product.description %></div> 
+            <div class="remera1"> Diseño inspirado en "<%= product.designs.design %>"</div> 
+             <!-- NO  ANDA EL TOSAN -->
+            <div class="remera1"> Precio: $ <%= product.price %></div>
+
+          <a class="remera1" href="/products/edit/<%= product.id %>"><button type="button">Editar</button></a>
+  
+          <form class="borrar" action="/products/destroy/<%= product.id %>?_method=DELETE"
+            method="POST">
+            
+            <button type="submit">Borrar</button>
+            </form>
+         <!--<a class="remera1" href="/products/destroy/<%= product.id %>"><button type="button" >Borrar</button></a>-->
+  
+          </section>
+  
+        
+  
+  
+      </div>
+    </div>
+  
+    </li>
+    <% }); %>
+  
+  </ul>
+  
+              </main>
+
+    <%-include("../partials/footer")%>
+</body>
+</html>

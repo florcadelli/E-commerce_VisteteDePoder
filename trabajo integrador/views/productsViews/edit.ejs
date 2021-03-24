@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include("../partials/head")%>
+  <body>
+    <div class="container-fluid">
+      <!--HEADER-->
+      <%-include("../partials/header")%>
+      <!--FIN HEADER-->
+      <main>
+        <!--MAIN-->
+
+        <form
+          action="/products/edit/<%=product.id%>?_method=PUT"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="registro1">
+            <label for="nombreProducto"></label>
+            <label for="descripcion"></label>
+            <!------PONER LOS ICONOS DE CADA INPUT ACA"-->
+          </div>
+
+          <div class="registro2">
+            <h3>Editar producto</h3>
+
+            <!-- <input
+              class="inputsRegistro"
+              type="text"
+              placeholder="Id Producto"
+              name="id"
+              value="<%= product.id %>"
+            /> -->
+           
+            <label for=""> Nombre producto</label>
+            <input
+              class="inputsRegistro"
+              type="text"
+              placeholder="Nombre Producto"
+              id="nombreProducto"
+              name="nombre"
+              value="<%= product.name %>"
+            />
+
+            
+            <label for=""> Descripción</label>
+            <textarea
+              class="inputsRegistro"
+              name="descripcion"
+              id=""
+              cols="60"
+              rows="1"
+              value="<%= product.description %>"
+            > 
+ <%= product.description %> </textarea
+            ><br />
+
+            <label for="" > Imagen </label>
+            <input type="file" name="avatar" id="avatar" /><br />
+      
+
+            <!-- <label for=""> Categoria</label>
+            <select class="inputsRegistro" name="Categoria" id="categoria">
+              <option value="Indumentaria">Indumentaria</option>
+              <option value="Merchandising">Merchandising</option>
+              <option value="Accesorios">Accesorios</option>
+            </select> -->
+
+            <label for=""> SubCategoría </label>
+            <select
+              class="inputsRegistro"
+              name="subCategoria"
+              id="subCategoria"
+            >
+            <% for(let i=0; i<subcategories.length; i++){ %> 
+              <option value="<%= subcategories[i].id %>"> 
+                 <%= subcategories[i].subcategory %> 
+              </option> 
+           <% } %>    
+           </select>
+
+            <!--No se muestra en las tarjetas de listS-->
+
+            <!--Talle/ Diseño / Cantidad (que sea un Select)-->
+
+            
+            <label for="" > Diseño </label>
+            <select class="inputsRegistro" name="disenio"> 
+                <% for(let i=0; i<designs.length; i++){ %> 
+                   <option value="<%= designs[i].id %>"> 
+                      <%= designs[i].design %> 
+                   </option> 
+                <% } %>    
+               </select> 
+ 
+     
+
+             <!--Precio (función de Miles)-->
+             
+             <label for="" > Precio </label>
+             <input
+               class="inputsRegistro"
+               type="text"
+               placeholder="Precio"
+               id="precioProducto"
+               name="precio"
+               value="<%=  product.price %>"
+             />
+ 
+             <button class="enviar" value="enviar" type="submit">
+               Editá tu producto en Vistete de Poder
+             </button>
+ 
+             
+           </div>
+         </form>
+ 
+      </main>
+
+      <%-include("../partials/footer")%>
+    </div>
+  </body>
+</html>

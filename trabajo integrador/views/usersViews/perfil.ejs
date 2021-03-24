@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include("../partials/head")%>
+<body>
+    <div class="container-fluid">
+            <!--HEADER-->
+            <header>
+                <%-include("../partials/header")%>
+                
+            </header>
+            <!--FIN HEADER-->
+            <main>
+
+                <!--MAIN-->  
+<div class="vistaAdm">                   
+<form class="tajetaAdm" action="/users/edit/<%= usuarioAIngresar.id %>?_method=PUT" method=GET>
+   
+    <% if (typeof errors!='undefined'){ %>
+        <p style='color:red'>ERROR</p>
+        <ul>
+            <% for(i=0; i < errors.length; i++){ %>
+            <li>
+                <%=errors[i].msg %>
+            </li>
+            <% } %>
+        </ul>
+
+        <% } %>
+    <div class="registro2">
+
+        <h4>Mi cuenta</h4>
+        <div class="infoAdm">
+        <!--<input class=inputsRegistro type="text" placeholder="Id" name="id">-->
+        <% if(usuarioAIngresar.image){ %>
+
+        
+            <section class="fotoAdm">
+               <img src="/images/usersImages/<%= usuarioAIngresar.image %> " alt=" <%= usuarioAIngresar.image%> ">
+            </section>
+    
+        <% }else{ %>
+     
+
+        <section class="fotoAdm">
+           <img src="/images/usersImages/defaultImage.jpg"  alt="defaultImage.jpg">
+       </section>
+         <% }%> 
+         <article class= "datosAdm">
+        <div class="nombreAdm" type="text" placeholder="Tu nombre" id="nombre" name="nombre" value="<%= usuarioAIngresar.name %>"> <%= usuarioAIngresar.name %></div> 
+                 
+        <div class="emailAdm"  type="email" placeholder="Correo electrónico"id="email" name="email" value="<%= usuarioAIngresar.email %>"><%= usuarioAIngresar.email %></div>
+        </article>          
+        </div>
+                     <!--Envían al home-->
+        <button class="enviarAdm" type="submit">Edita tu cuenta</button>
+    
+    
+    </div>
+   
+</form>
+</div>
+            </main>
+
+            <%-include("../partials/footer")%>
+
+    </div>
+
+</body>
+</html>

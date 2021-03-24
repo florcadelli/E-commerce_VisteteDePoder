@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include("../partials/head")%>
+<body>
+    <div class="container-fluid">
+            <!--HEADER-->
+            <%-include("../partials/header")%>
+            <!--FIN HEADER-->
+            <main>
+
+                <!--MAIN-->
+
+                <% if (typeof errors!='undefined'){ %>
+                    <p style='color:red'>ERROR</p>
+                    <ul>
+                        <% for(i=0; i < errors.length; i++){ %>
+                        <li>
+                            <%=errors[i].msg %>
+                        </li>
+                        <% } %>
+                    </ul>
+            
+                    <% } %>
+              
+                
+<form  action="/products/create" method="POST" enctype="multipart/form-data" class="creacionProducto">
+    
+   
+    <div class="registro2">
+        <h3>Crear producto</h3>
+
+       
+        <label for="nombre">Nombre Producto</label> <div class='errornombre'></div>
+        <input class="inputsRegistro validar" type="text" placeholder="" id="name" name="nombre" value="">
+        
+        
+        <label for="precio">Precio</label> <div class='errorPrecio'></div>
+        <input class="inputsRegistro validar"  type="text" placeholder="" id="precioProducto" name="precio">
+       
+
+        <label for="descripcion">Descripción</label> <div class='errorDescripcion'></div>
+        <textarea class="inputsRegistro validar"   placeholder="" name="descripcion" id="descripcion" cols="120" rows="1"></textarea><br>
+      
+
+        <label for="imagen">Imagen</label> 
+        <input  type="file" name="avatar" id="id"><br>
+     
+
+        <!-- <label for="" > Categoría: </label>                         
+        <select class="inputsRegistro" name ="categoria" id="categoria">
+            <option value="Indumentaria">Indumentaria</option>
+            <option value="Merchandising">Merchandising</option>
+            <option value="Accesorios">Accesorios</option>
+        </select> -->
+      
+        <label for="" > SubCategoría </label>
+        <select class="inputsRegistro subcat" name="subcategoria" id="subcategoria" > 
+            <% for(let i=0; i<subcat.length; i++){ %> 
+               <option value="<%= subcat[i].id %>"> 
+                  <%= subcat[i].subcategory %> 
+               </option> 
+            <% } %>    
+           </select>  
+
+         <label for="" > Diseño </label>
+        <select class="inputsRegistro" name="disenio"> 
+            <% for(let i=0; i<designs.length; i++){ %> 
+               <option value="<%= designs[i].id %>"> 
+                  <%= designs[i].design %> 
+               </option> 
+            <% } %>    
+           </select> 
+
+    
+      <!-- <input class=inputsRegistro type="text" placeholder="Cantidad" id="cantidadProducto" name="cantidad"> -->
+      
+        <button class="enviar" value="enviar" type="submit">Crea tu producto en Vistete de Poder</button>
+    
+        <!-- <a class="aIngreso"href="/products/list">Ver tus productos</a> -->
+   </div>
+</form>
+<script src="../JSfront/validationsProductCreate.js"></script>
+          
+            </main>
+
+            <%-include("../partials/footer")%>
+
+    </div>
+
+</body>
+</html>

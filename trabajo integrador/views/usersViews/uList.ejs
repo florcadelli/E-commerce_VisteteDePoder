@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+              <%-include("../partials/head")%>
+  
+    <body>
+        <div class="container-fluid">
+          <header>
+            <%-include("../partials/header")%>
+            
+          </header>
+
+      <main>
+         <ul class="listUsers">
+            <% usersFile.forEach(function(user){ %>
+ 
+          <li class="infoUser">
+                   
+      
+ 
+           
+           <% if(user.image){ %>
+             <section class="fotoListUsuario">
+                 <img src="/images/usersImages/<%= user.image %> " alt=" <%= user.image %> ">
+               
+             </section>
+           <% }else{ %>
+             <section class="fotoListUsuario">
+               <img src="/images/usersImages/defaultImage.jpeg"  alt="defaultImage.jpeg">            
+             </section>
+           <% }%> 
+
+        
+
+
+          <div class="datosUser">
+          
+             <div  type="text" name="id"> Id: <%= user.id %> </div>
+             <div type="text"  id="nombre" name="nombre">Nombre: <%= user.name %>  </div>
+             <div  type="email" id="email" name="email">Email: <%= user.email %> </div>
+                        
+          </div>
+
+          <!-- <form  action="/users/perfil">
+            <button type='submit'>Ver Perfil</button>
+          </form> -->
+         <div class="usersButton">
+          <form  action="/users/edit/<%= user.id %>?_method=PUT" method=GET>
+            <button type='submit'>Editar</button>
+          </form>
+
+          <form class="borrar" action="/users/destroy/<%= user.id %>?_method=DELETE" method="POST">
+            <button type='submit'>Borrar</button>
+          </form>
+        </div>
+        </li>
+
+         <% }); %>
+      </ul>
+     </main>
+ 
+    
+ 
+          <footer>
+                <%-include("../partials/footer")%>
+          
+          </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include("../partials/head")%>
+  <body>
+    <div class="container-fluid">
+      <!--HEADER-->
+
+      <%-include("../partials/header")%>
+      <!-- fin del HEADER-->
+      <!--MAIN-->
+      <main class="mainProducto">
+
+      
+        <a class="preguntas" href="/users/detail/<%= usuarioAIngresar.id %>">
+          
+          <button type="submit">Volver a Mi Perfil</button>
+        
+        </a>
+
+        <section class="Nombre-Producto"><%= product.name %></section>
+
+        <div
+          class="tarjeta"
+          action="/products/detailProduct/<%= product.id %>"
+          method="GET"
+        >
+          <div class="producto-y-descripcion">
+            <% if(product.image){ %>
+            <section class="fotoProducto">
+              <article>
+                <img
+                  src="/images/imagesProducts/<%= product.image %> "
+                  alt=" <%= product.image %> "
+                />
+              </article>
+            </section>
+            <% }else{ %>
+
+            <section class="fotoProducto">
+              <article>
+                <img
+                  src="/images/imagesProducts/defaultImage.jpg"
+                  alt="defaultImage.jpg"
+                />
+              </article>
+            </section>
+            <% }%>
+
+            <section class="descripcion">
+              <div class="remera1">Producto: <%= product.name %></div>
+              <p> Descripcion: <%= product.description %></p>
+              <p> Diseño: <%= product.designs.design %></p>       
+
+              <!-- <article class="talle-cantidad">
+                <label for=""> Talle: <%= product.sizes.size %> </label>
+              </article> -->
+
+              <article class="talle-cantidad">
+                <label for="">Subcategoría: </label>
+                <%= product.subcat.subcategory %> 
+              </article>
+
+              <h4>Precio: $ <%= product.price %></h4>
+
+              <a class="remera1" href="/products/edit/<%= product.id %>">
+                <button type="button">Editar</button>
+              </a>
+
+                <form class="borrar" action="/products/destroy/<%= product.id %>?_method=DELETE"
+                  method="POST">
+                  
+                  <button type="submit">Borrar</button>
+                </form>
+                  <a class="remera1" href="/products/listProductsAdm">
+                    <button type="button">Volver a Lista</button>
+                  </a>
+             
+            
+
+                 
+
+            </section>
+          </div>
+        </form>
+      </div>
+      </main>
+      <%-include("../partials/footer")%>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include("../partials/head")%>
+  <body>
+    <div class="container-fluid">
+      <!--HEADER-->
+
+      <%-include("../partials/header")%>
+      <!-- fin del HEADER-->
+      <!--MAIN-->
+      <main class="mainProducto">
+        <section class="Nombre-Producto"><%= product.name %></section>
+
+        <div
+          class="tarjeta"
+          action="/products/detailProduct/<%= product.id %>"
+          method="GET"
+        >
+          <div class="producto-y-descripcion">
+            <% if(product.image){ %>
+            <section class="fotoProducto">
+              <article>
+                <img
+                  src="/images/imagesProducts/<%= product.image %> "
+                  alt=" <%= product.image %> "
+                />
+              </article>
+            </section>
+            <% }else{ %>
+
+            <section class="fotoProducto">
+              <article>
+                <img
+                  src="/images/imagesProducts/defaultImage.jpg"
+                  alt="defaultImage.jpg"
+                />
+              </article>
+            </section>
+            <% }%>
+
+            <section class="descripcion">
+              <div class="remera1"><%= product.name %></div>
+              <p> <%= product.description %></p>
+              <p> Diseño inspirado en <%= product.designs.design %></p>   
+              <h4>Precio: $ <%= product.price %></h4>
+            
+           
+
+              </select>
+
+              <!-- <article class="talle-cantidad">
+                <label for=""> <%= product.size %> </label>
+              </article> -->
+
+              <!-- <article class="talle-cantidad">
+                <label for="">Subcategoría: <%= product.subcat.subcategory %> </label>
+              </article> -->
+
+              <form class="añadirCarrito" action='/carrito/agregarProducto' method="POST" >
+                <input class= number type='number' placeholder ='cantidad' value ='1' name= 'quantity' min = '1'> 
+                <input type='hidden'  value ='<%= product.id %>' name= 'productId' > <br>
+  
+               <button class="aCarrito"type="submit">Añadir a carrito</button>
+              </form>
+
+            
+            </section>
+          </div>
+        </div>
+    
+      </main>
+      <%-include("../partials/footer")%>
+    </div>
+  </body>
+</html>

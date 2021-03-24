@@ -1,0 +1,149 @@
+[
+  {
+    "avatar": "avatar-1609888578692.jpg",
+    "nombre": "remera",
+    "descripcion": " \r\n  ",
+    "Categoria": "Indumentaria",
+    "subCategoria": "1",
+    "disenio": "1",
+    "talle": "1",
+    "precio": "1222",
+    "delete": false,
+    "id": "1"
+  },
+  {
+    "id": "2",
+    "nombre": "remerassssssssssssssssssssssssss",
+    "descripcion": "",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "",
+    "delete": false
+  },
+  {
+    "id": "2",
+    "nombre": "",
+    "descripcion": "",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "",
+    "delete": false
+  },
+  {
+    "id": "3",
+    "nombre": "florencia ",
+    "descripcion": "",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "",
+    "delete": false
+  },
+  {
+    "id": "6",
+    "nombre": "pamela",
+    "descripcion": "",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "",
+    "delete": true
+  },
+  {
+    "avatar": "avatar-1609888385543.jpg",
+    "id": "28",
+    "nombre": " calza",
+    "descripcion": "  ",
+    "Categoria": "Accesorios",
+    "subCategoria": "",
+    "talle": "",
+    "disenio": "borges",
+    "cantidad": "",
+    "precio": "",
+    "delete": false
+  },
+  {
+    "id": "",
+    "nombre": "cc",
+    "descripcion": "cc",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "1322",
+    "delete": false
+  },
+  {
+    "id": "100",
+    "nombre": "foto default",
+    "descripcion": "default",
+    "avatar": "avatar-1608949795547.jpg",
+    "categoria": "Indumentaria",
+    "talle": "M",
+    "disenio": "freud",
+    "precio": "1000",
+    "delete": false
+  },
+  {
+    "id": "7",
+    "nombre": "remera",
+    "descripcion": "jose",
+    "avatar": "avatar-1608984684695.jpg",
+    "categoria": "Merchandising",
+    "talle": "",
+    "disenio": "",
+    "precio": "2600",
+    "delete": false
+  },
+  {
+    "id": "26",
+    "nombre": "remera",
+    "descripcion": "ddd",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "2333",
+    "delete": false
+  },
+  {
+    "id": "101",
+    "nombre": "sss",
+    "descripcion": "sss",
+    "avatar": null,
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "122",
+    "delete": false
+  },
+  {
+    "id": "102",
+    "nombre": "aaa",
+    "descripcion": "aaa",
+    "avatar": "avatar-1609243681205.jpg",
+    "categoria": "Indumentaria",
+    "talle": "",
+    "disenio": "",
+    "precio": "122",
+    "delete": false
+  },
+  {
+    "avatar": "avatar-1609888578692.jpg",
+    "nombre": "remera",
+    "descripcion": " \r\n  ",
+    "Categoria": "Indumentaria",
+    "subCategoria": "1",
+    "disenio": "1",
+    "talle": "1",
+    "precio": "1222",
+    "delete": false,
+    "id": "1"
+  }
+]

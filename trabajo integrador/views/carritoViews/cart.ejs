@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include("../partials/head")%>
+  <body>
+    <div class="container-fluid">
+      <!--HEADER-->
+      <header>
+          <%-include("../partials/header")%>
+
+      </header>
+      <!--FIN HEADER-->
+          
+      <div class="tituloMiCarrito">Mi carrito</div>
+      <div class="row">
+        <!-- Vista de carga productos desde la base de datos-->
+        <main id="items" >
+            <% if (carrito !=undefined){%>
+              <% if (products !=undefined && products.length > 0){%>
+                <!-- <h2>Carrito</h2> -->
+                <ul id="carrito" class="list-group">
+                
+                <% for(let i=0;i < products.length; i++){ %>
+                    <li>
+                      <div class="imagenCarrito">
+                      <img src="/images/imagesProducts/<%= products[i].products.image %>" alt="imagen producto">
+                      </div>  
+                      
+                      <div class="datosProdCarrito">
+                        <div class="cantidadCarrito">
+              
+                        Producto: <%= products[i].products.name %>
+                        <div class="precioCarrito">
+                         Precio: $<%= products[i].products.price %>
+                         </div>
+                         Cantidad: <%= products[i].quantity.toString() %> 
+                        </div>
+                        
+                        <form action="/carrito/destroy/<%= products[i].id %>?_method=DELETE" method="POST" >
+                            <button class="borrarProducto" type="submit" >Eliminar</button>
+                        </form>
+
+                      </div>
+                    </li>
+                <% } %>
+              </ul>
+
+            
+              <!-- Precio total parse int covierte el precio en numero-->
+              <p class="botonTotal">Total: <span id="total"></span>&dollar;
+                <%= products.reduce((accum,item) => accum + (parseInt(item.quantity) * parseInt(item.products.price)), 0) %></p>
+                
+                <form action="/carrito/finalizarCompra/<%= carrito.id %>" method="POST" >
+                  <button type="submit" class="botonComprar">Finalizar Compra</button>
+                </form>
+
+
+              <form action="/carrito/vaciar/<%= carrito.id %>" method="POST" >
+                  <button id="boton-vaciar" type="submit" >Vaciar carrito</button>
+              </form>
+              
+              <% }else{ %>
+                <h5 class="carritoVacio">El carrito esta vacio</h5>
+              <% }%>
+            <% }%>
+        </main>
+      </div>
+      <%-include("../partials/footer")%>
+    </div>
+  </body>
+</html>

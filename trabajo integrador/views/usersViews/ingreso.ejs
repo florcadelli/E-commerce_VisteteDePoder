@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include("../partials/head")%>
+
+    <body>
+       
+
+                <div class="container-fluid">
+                    <!--HEADER-->
+                    <header>
+                        <%-include("../partials/header")%>
+
+                    </header>
+                    <!--FIN HEADER-->
+                    <!--MAIN-->
+                    <main>
+                        <% if (typeof errors!='undefined' ){ %>
+                            <p style='color:red'>ERROR</p>
+                            <ul>
+                                <% for(i=0; i < errors.length; i++){ %>
+                                    <li>
+                                        <%=errors[i].msg %>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                
+                            <% } %>
+
+
+                             
+                        <form action="/users/ingreso" method="POST">
+                            <!--iconos-->
+
+                            <div class="ingreso1">
+                                <label for="nombre"><i class="fas fa-user"></i></label>
+                                <label for="contraseña"><i class="fas fa-lock"></i></label>
+                            </div>
+
+                            <div class="ingreso2">
+                                <h3>Ingresar cuenta</h3>
+                                <!--inputs-->
+                                <div class="contraseña">
+                                    <input type="email" placeholder="Escribe tu email" id="email" name="email">
+                                </div>
+                                <div class="contraseña">
+                                    <input type="password" placeholder="Contraseña" id="contrasenia" name="contrasenia">
+                                </div>
+                                <!--button-->
+
+                                <!--textos-->
+                                <!--label for="Recordame"></label-->
+                                <div class="recordame">Recordame</div><input type="checkbox" name="recordame">
+                                <button class="iniciarSesion" type="submit">Iniciar sesión</button>
+                                <!-- <a class="preguntas" href="#">Me olvide mi contraseña</a> -->
+                                <!-- no faltó el "value" en el submit??? -->
+                                <div class="preguntita">¿No tenés cuenta?</div>
+                                <a class="preguntas" href="./registro"> Crear una cuenta nueva</a>
+                            </div>
+                            
+                        </form>
+
+                    </main>
+
+                    <%-include("../partials/footer")%>
+
+                </div>
+
+    </body>
+
+</html>

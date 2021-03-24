@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("../partials/head")%>
+<body>
+    <div class="container-fluid">
+        <!--HEADER-->
+        
+            <%-include("../partials/header")%>
+          <!-- fin del HEADER-->  
+
+          <!--MAIN-->   
+       <main class="mainProducto">        
+       
+       <section class="Nombre-Producto">
+        Productos encontrados 
+       </section>
+    
+
+
+       <ul class= "listado">
+
+        <% products.forEach(function(product){ %>
+        <li class="tarjetamini">
+        
+         <div class="fondo">
+          <div class="producto-y-descripcion">
+
+            <% if(product.image){ %>
+
+              <section class="fotoProducto">
+                  <article> <img src="/images/imagesProducts/<%= product.image  %> " alt=" <%= product.image %> ">
+                      
+                  </article>
+              </section>
+        
+              <% }else{ %>
+        
+                
+            
+            <section class="fotoProducto">
+              <article> <img src="/images/imagesProducts/defaultImage.jpg"  alt="defaultImage.jpg">
+                  <!--no lo muestra-->
+              </article>
+          </section>
+             <% }%> 
+
+
+            <section class="descripcion">
+
+            <div class="remera1 nombre">  <%= product.name %></div>
+            <div class="remera1">  <%= product.description %></div> 
+            <div class="remera1"> Diseño inspirado en "<%= product.designs.design %>"</div> 
+             <!-- NO  ANDA EL TOSAN -->
+            <div class="remera1"> Precio: $ <%= product.price %></div>
+           
+            <form class="añadirCarrito" action='/carrito/agregarProducto' method="POST" >
+              <input class= number type='number' placeholder ='cantidad' value ='1' name= 'quantity' min = '1'> 
+              <input type='hidden'  value ='<%= product.id %>' name= 'productId' > <br>
+
+             <button class="aCarrito"type="submit">Añadir a carrito</button>
+            </form>
+
+            </section>
+      
+          </div>
+          
+        </div>
+      
+        </li>
+        <% }); %>
+      
+      </ul>
+ 
+
+            </main>
+
+    <%-include("../partials/footer")%>
+</body>
+</html>
