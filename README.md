@@ -9,6 +9,4 @@ Nuestra audiencia objetivo son los amante de las libros y las historias, al que 
 Por medio del diseño estetico de la pagina intentamos transportar al cliente al mundo de las letras y la serigrafia ( magenes de distintos textos y autores, textura de papeles, sellos, etc...)
 
  Integrantes:
- Xiomara Ocampo-programadora y profesora de ingles.
- Laura Loreiro-programadora con conocimientos contables.
- Florencia Cadelli -programadora con conocimientos de diseño e imagen.
+ Xiomara Ocampo - Laura Loreiro - Florencia Cadelli.
